@@ -1,1 +1,28 @@
 hey! i created this text file.
+
+#static method
+class MathOperations:
+   @staticmethod
+   def add(x, y):
+       return x + y
+   @staticmethod
+   def subtract(x, y):
+       return x - y
+# Using static methods
+print(MathOperations.add(5, 3)) # Output: 8
+print(MathOperations.subtract(10, 4)) # Output: 6
+
+#class method
+class Person:
+   population = 0
+   def __init__(self, name):
+       self.name = name
+       Person.population += 1
+   @classmethod
+   def get_population(cls):
+       return cls.population
+# Creating instances
+p1 = Person("Alice")
+p2 = Person("Bob")
+# Using class method
+print(Person.get_population()) # Output: 2
